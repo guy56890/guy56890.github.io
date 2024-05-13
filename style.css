@@ -9,3 +9,8 @@ body{
     color : #21396b;
 }
 
+#header{
+    width: 100%;
+    height: 100%;
+    background-image: url(images/gloydius-detachment.png);
+}
