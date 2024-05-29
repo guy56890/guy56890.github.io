@@ -5,7 +5,9 @@
     box-sizing: border-box;
 }
 
-
+top-image {
+    filter: brightness(.4);
+}
 
 body {
     margin: 0;
