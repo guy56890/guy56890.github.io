@@ -6,6 +6,8 @@
 }
 
 top-image {
+    width: auto;
+    height: 400;
     filter: brightness(.4);
 }
 
