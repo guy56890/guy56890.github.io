@@ -1,3 +1,8 @@
+@font-face {
+    font-family: RubikMono;
+    src: url(../RubikMonoOne-Regular.ttf)
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,18 +10,36 @@
     box-sizing: border-box;
 }
 
-.container-top {
+.wrapper {
+    width: 100%;
+    height: 350px;
     position: relative;
-    text-align: center;
-    color: white;
+    margin: 0 auto;
+    background: url(../images/gloydius-detachment.png) 
+    no-repeat center/cover;
 }
-  
 
-.centered-top {
+.wrapper::before {
+    content: "";
     position: absolute;
+    transform: translate(-50%, 0);
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #15680011 50%, #00000044 100%);
+}
+
+.wrapper::after {
+    background: linear-gradient(transparent, gray);
+}
+
+.text {
+    font-size: 4rem;
+    font-family: RubikMono, Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    position: absolute;
+    text-align: center;
+    width: 100%;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 body {
