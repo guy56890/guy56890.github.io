@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Projects</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-blue-600 p-4">
+        <div class="container mx-auto flex justify-between">
+            <a href="index.html" class="text-white text-xl font-bold">My Portfolio</a>
+            <ul class="flex space-x-4">
+                <li><a href="#experience" class="text-white hover:underline">Experience</a></li>
+                <li><a href="scripting.html" class="text-white hover:underline">Scripting</a></li>
+                <li><a href="building.html" class="text-white hover:underline">Building</a></li>
+                <li><a href="gfx.html" class="text-white hover:underline">Graphics</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container mx-auto p-6">
+        <h1 class="text-3xl font-bold mb-4">Building Projects</h1>
+        <ul class="list-disc list-inside">
+            <li>Project D - Description of project D.</li>
+            <li>Project E - Description of project E.</li>
+            <li>Project F - Description of project F.</li>
+        </ul>
+    </main>
+
+    <footer class="bg-gray-800 text-white p-4 text-center">
+        <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
