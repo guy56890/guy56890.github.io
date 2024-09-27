@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Projects</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-blue-600 p-4 shadow-md fixed w-full z-10">
+        <div class="container mx-auto flex justify-between">
+            <a href="index.html" class="text-white text-xl font-bold transition-transform transform hover:scale-110">My Portfolio</a>
+            <ul class="flex space-x-4">
+                <li><a href="index.html#experience" class="text-white hover:underline transition-colors duration-300">Experience</a></li>
+                <li><a href="scripting.html" class="text-white hover:underline transition-colors duration-300">Scripting</a></li>
+                <li><a href="building.html" class="text-white hover:underline transition-colors duration-300">Building</a></li>
+                <li><a href="gfx.html" class="text-white hover:underline transition-colors duration-300">Graphics</a></li>
+            </ul>
+        </div>
+    </
