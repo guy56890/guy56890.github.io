@@ -12,6 +12,15 @@
             transition: opacity 1s ease;
         }
 
+        .nocopy {
+ -webkit-touch-callout: none;
+ -webkit-user-select: none;
+ -khtml-user-select: none;
+ -moz-user-select: none;
+ -ms-user-select: none;
+ user-select: none;
+}
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -39,7 +48,7 @@
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white font-mono overflow-hidden h-screen fade" id="fadeBody">
+<body class="bg-gray-900 text-white font-mono overflow-hidden h-screen fade" id="fadeBody nocopy">
 
     <audio src="assets/bg-music.mp3" autoplay loop id="bg-music">
         <p>If you are reading this, it is because your browser does not support the audio element.     </p>
