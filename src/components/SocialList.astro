@@ -11,11 +11,25 @@ const socialLinks: {
 	isWebmention?: boolean;
 	link: string;
 	name: string;
+	hover: string;
 }[] = [
 	{
 		friendlyName: "Discord",
-		link: "https://discord.gg/astro",
-		name: "mdi:discord",
+		link: "https://discord.com/users/554691397601591306",
+		name: "ic:outline-discord",
+		hover: "hover:text-[#5865F2]",
+	},
+	{
+		friendlyName: "Roblox",
+		link: "https://www.roblox.com/users/651311357/profile",
+		name: "simple-icons:robloxstudio",
+		hover: "hover:text-[#00A2FF]",
+	},
+	{
+		friendlyName: "YouTube",
+		link: "https://www.youtube.com/@guy56890",
+		name: "mdi:youtube",
+		hover: "hover:text-[#FF0000]",
 	},
 ];
 ---
@@ -24,10 +38,10 @@ const socialLinks: {
 	<p>Find me on</p>
 	<ul class="flex flex-1 items-center gap-x-2 sm:flex-initial">
 		{
-			socialLinks.map(({ friendlyName, isWebmention, link, name }) => (
+			socialLinks.map(({ friendlyName, isWebmention, link, name, hover }) => (
 				<li class="flex">
 					<a
-						class="hover:text-link inline-block"
+						class={`inline-block ${hover}`}
 						href={link}
 						rel={`noreferrer ${isWebmention ? "me authn" : ""}`}
 						target="_blank"

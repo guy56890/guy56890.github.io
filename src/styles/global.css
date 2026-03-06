@@ -63,7 +63,7 @@
 	@import "./components/github-card.css";
 
 	.cactus-link {
-		@apply hover:decoration-link underline underline-offset-2 hover:decoration-2;
+		@apply hover:decoration-link font-bold text-purple-200 hover:decoration-2;
 	}
 
 	.title {

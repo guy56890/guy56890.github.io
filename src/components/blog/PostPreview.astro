@@ -11,14 +11,33 @@ type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {
 const { as: Tag = "div", post, withDesc = false } = Astro.props;
 ---
 
-<FormattedDate
-	class="min-w-30 font-semibold text-gray-600 dark:text-gray-400"
-	date={post.data.publishDate}
-/>
-<Tag>
-	{post.data.draft && <span class="text-red-500">(Draft) </span>}
-	<a class="cactus-link" href={`/posts/${post.id}/`}>
-		{post.data.title}
-	</a>
-</Tag>
-{withDesc && <q class="line-clamp-3 italic">{post.data.description}</q>}
+<div class="grid gap-1 sm:grid-cols-[auto_1fr]">
+	<div class="flex justify-center">
+		<FormattedDate
+			class="min-w-30 font-semibold text-gray-600 dark:text-gray-400"
+			date={post.data.publishDate}
+		/>
+	</div>
+	<div>
+		<Tag>
+			{post.data.draft && <span class="text-red-500">(Draft) </span>}
+			<a href={`/posts/${post.id}/`} class="cactus-link">
+				{post.data.title}
+			</a>
+			{
+				post.data.video && (
+					<iframe
+						class="mt-1 ml-2 rounded-md"
+						style="width: 560px; height: 315px;"
+						src={post.data.video}
+						title={post.data.title}
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin"
+						allowfullscreen
+					/>
+				)
+			}
+		</Tag>
+		{withDesc && <q class="line-clamp-3 italic">{post.data.description}</q>}
+	</div>
+</div>

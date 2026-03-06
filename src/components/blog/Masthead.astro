@@ -36,6 +36,21 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 <h1 class="title">
 	{data.title}
 </h1>
+{
+	data.video && (
+		<div class="mt-4 mb-4">
+			<iframe
+				class="w-full rounded-md"
+				style="max-width: 560px; height: 315px;"
+				src={data.video}
+				title={data.title}
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				referrerpolicy="strict-origin-when-cross-origin"
+				allowfullscreen
+			/>
+		</div>
+	)
+}
 <div class="flex flex-wrap items-center gap-x-3 gap-y-2">
 	<p class="font-semibold">
 		<FormattedDate date={data.publishDate} dateTimeOptions={dateTimeOptions} /> /{" "}
